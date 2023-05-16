@@ -76,6 +76,41 @@ public class UserController {
 
 </details>
 
+<details>
+<summary>@toString</summary>
+
+- 객체 상태에 대한 관련 정보를 문자열로 출력하여 볼 수 있게 해주는 어노테이션 입니다.
+
+```Java
+public class Person {
+    private String name;
+    private int age;
+
+    // Constructor and other methods omitted for brevity
+
+    @Override
+    public String toString() {
+        return "Person [name=" + name + ", age=" + age + "]";
+    }
+}
+```
+    
+다음과 같이 toString 메소드를 override 하여 현재 객체에 대한 상태를 보여줄 수 있지만
+
+@toString 어노테이션을 사용하면 자동으로 override 되어 사용할 수 있습니다.
+
+
+</details>
+
+
+
+
+
+
+
+
+
+
 
 
 <details>
