@@ -104,8 +104,24 @@ public class Person {
 
 
 
+<details>
+<summary>@Service </summary>
+    
+- @Component과 같은 맥락이며 **스프링 컨텍스트**에 bean으로 등록하는 어노테이션입니다.
 
+    스프링 컨테이너에 스프링 Bean으로 등록되면 해당 클래스는 IoC 컨테이너가 싱글톤으로 관리합니다.
+    
+    보통 비즈니스 로직이나 respository layer 호출하는 Service 클래스에 사용됩니다.
+    
+```Java    
+@Service
+public class UserService {
+    // Class implementation
+}
+``` 
+   
 
+</details>
 
 
 
