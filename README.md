@@ -70,6 +70,8 @@ public class UserController {
     
 }
 ```
+</details>
+
 
 <details>
 <summary>@Component</summary>
@@ -85,9 +87,6 @@ public class UserService {
     // Class implementation
 }   
 ```
-    
-
-
 
 </details>
 
