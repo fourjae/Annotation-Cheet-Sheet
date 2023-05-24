@@ -71,6 +71,21 @@ public class UserController {
 }
 ```
 
+<details>
+<summary>@Component</summary>
+- @Component는 개발자가 직접 작성한 Class를 Bean으로 등록함으로써 **Application Context**에서 해당 클래스를 빈으로 자동 감지 및 등록하게 도와주는 Annotation 입니다.
+    
+    스프링 컨테이너에 스프링 Bean으로 등록되면 해당 클래스는 IoC 컨테이너가 싱글톤으로 관리합니다.
+    
+    Service 클래스가 아닌 직접 작성한 클래스(설정 파일 등)을 Bean으로 등록할 때 사용합니다.
+    
+```
+@Component
+public class UserService {
+    // Class implementation
+}   
+```
+    
 
 
 
