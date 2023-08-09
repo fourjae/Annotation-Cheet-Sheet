@@ -28,6 +28,30 @@ User user = new User("fourThree", "유저", "passW0rd", 15); // @AllArgsConstruc
   
 </details>
 
+<details>
+<summary>@GetMapping</summary>
+
+- Get 메서드 요청을 메서드에 맵핑(@RequestMapping) 해줍니다.
+    - "기본 값은 없음이며 값을 넣을경우 해당 url 경로에 매핑해줍니다."
+
+```Java
+@RestController
+@RequestMapping("/")
+public class Controller {
+
+    @GetMapping("/getParameter")    
+    public String getParameter(@RequestParam String name) {
+        return name;
+    }
+    
+}
+```
+  
+</details>
+
+
+
+
 
 <details>
 <summary>@RequiredArgsConstructor</summary>
