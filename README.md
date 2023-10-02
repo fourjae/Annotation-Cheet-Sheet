@@ -143,7 +143,7 @@ public class Person {
 
 
 <details>
-<summary>@Service </summary>
+<summary>@Service</summary>
     
 - @Component과 같은 맥락이며 **스프링 컨텍스트**에 bean으로 등록하는 어노테이션입니다.
 
@@ -188,5 +188,55 @@ public class User {
 ```Java
 User user = new User(); // @NoArgsConstructor
 ```
-
 </details>
+
+
+
+
+
+<details>
+<summary>@EqualsAndHashCode</summary>
+
+- Equals() HashCode() 메서드를 자동으로 생성하여 클래스에 추가합니다.
+
+```Java
+@EqualsAndHashCode
+public class Person {
+    private String name;
+    private int age;
+
+    //equals 두 객체가 같은지 비교
+    //hashCode 해시 코드를 반환
+}
+```
+
+위 어노테이션은 아래와 같은 메서드를 생성합니다.
+
+```Java
+public class Person {
+    private String name;
+    private int age;
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null || getClass() != obj.getClass()) return false;
+        
+        Person person = (Person) obj;
+        return age == person.age && (name == null ? person.name == null : name.equals(person.name));
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + age;
+        result = 31 * result + (name != null ? name.hashCode() : 0);
+        return result;
+    }
+}
+```
+  
+</details>
+
+
+
